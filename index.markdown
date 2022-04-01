@@ -23,6 +23,9 @@ nav_order: 1
     - [Alohamora](#alohamora)
   - [Werking](#Werking)
 
+## Inleiding
+
+In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compounds (VOC) vrijkomen, dit zijn onder andere componenten van brandstoffen of oplosmiddelen. Deze kunnen schadelijk zijn voor de gezondheid. Het is dan ook belangrijk deze gassen in de gaten te houden en een waarschuwing te verzenden wanneer bepaalde waarden overschreden worden. Zeker wanneer personen aanwezig zijn in de vervuilde ruimte.
 
 ## Flow chart
 
