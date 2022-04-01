@@ -28,7 +28,7 @@ nav_order: 1
 In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compounds (VOC) vrijkomen, dit zijn onder andere componenten van brandstoffen of oplosmiddelen. Deze kunnen schadelijk zijn voor de gezondheid. Het is dan ook belangrijk deze gassen in de gaten te houden en een waarschuwing te verzenden wanneer bepaalde waarden overschreden worden. Zeker wanneer personen aanwezig zijn in de vervuilde ruimte.
 
 ## Flow chart
-![flow chart](https://github.com/IOT-Clean-Air/verslag/blob/main/Untitled%20Diagram.drawio.png)
+![flow chart](https://github.com/IOT-Clean-Air/verslag/blob/main/Untitled%20Diagram.drawio.PNG)
 
 ## Rolverdeling
 
@@ -57,4 +57,4 @@ We veronderstellen in eerste instantie dat we de IOT node gaan voeden met een ba
 ### Gebruikte sensoren
 
 Als gassensor gebruiken we de [BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) van Bosch.
-Om de bewegingen in de ruimte te registreren gebruiken we de[EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf) een PIR sensor van Panasonic.
+Om de bewegingen in de ruimte te registreren gebruiken we de [EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf) een PIR sensor van Panasonic.
