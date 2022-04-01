@@ -31,6 +31,13 @@ In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compo
 
 ## Rolverdeling
 
+|                 | Technisch             | niet technisch            |
+|-----------------|-----------------------|---------------------------|
+| Roeland Osaer   | Software sensor       | Verantwoordelijke verslag |
+| Mathieu Martens | Hardware schema       | Presentatie               |
+| Viktor Morre    | Software communicatie | Communicatie groepen      |
+| Glen Smet       | Hardware PCB design   | Project manager           |
+
 ### Gebruikte sensoren
 ### Microcontroller
 ESP32-C3-WROOM-02-N4
