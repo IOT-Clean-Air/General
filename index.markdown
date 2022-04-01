@@ -57,4 +57,4 @@ We veronderstellen in eerste instantie dat we de IOT node gaan voeden met een ba
 ### Gebruikte sensoren
 
 Als gassensor gebruiken we de [BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) van Bosch.
-Om de bewegingen in de ruimte te registreren gebruiken we [EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf) een PIR sensor van Panasonic.
+Om de bewegingen in de ruimte te registreren gebruiken we de[EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf) een PIR sensor van Panasonic.
