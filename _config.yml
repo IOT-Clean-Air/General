@@ -18,18 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Project BA3"
+title: "IOT-Clean-Air"
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Documentatie voor het project van bacherlor 3, KU Leuven technologiecampus Gent.
+  Documentatie voor het project IOT-Clean-Air, KU Leuven technologiecampus Gent.
 baseurl: "/General" # the subpath of your site, e.g. /blog
-url: "https://Project-ES-20-21.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://iot-clean-air.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username: jekyll
 
 aux_links:
-  "Project ES/GS 2020-2021 op GitHub":
-    - "//github.com/Project-ES-20-21/"
+  "Project op GitHub":
+    - "//github.com/iot-clean-air/"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
