@@ -42,7 +42,7 @@ In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compo
 
 ### Detectie personen
 Indien er niemand gedetecteerd wordt mag er minder frequent gemeten worden maar moet er nog steeds een melding gegeven worden als de treshold overschreden wordt.
-Indien er iemand gedetecteerd wordt moet er frequenter gemeten worden en moet er lokaal een alarm afgegaan bovenop op de melding. De threshold en frequenties van meten zijn opgenomen in het blokschema.
+Indien er iemand gedetecteerd wordt moet er frequenter gemeten worden en moet er lokaal een alarm afgegaan bovenop op de melding. De threshold en frequenties van meten zijn opgenomen in het blokschema. Dit was het eerste concept van de IOT node. Maar na het testen en verdiepen in de gekozen gassensor hebben we ontdekt dat er geen mogelijkheid is om een IAQ meting te doen op een ander interval dan 5s.
 
 ### Gasmetingen
 De lucht in de ruimte wordt gemeten, op basis daarvan wordt beslist of deze niet vervuild is. Bij een goede waarde hoeft er niet meteen iets te gebeuren en kan er terug in sleep mode gegaan worden. Anders wordt een geluidssignaal afgespeeld (enkel indien er beweging was gedetecteerd)  en onmiddellijk een update verzonden naar de database.
