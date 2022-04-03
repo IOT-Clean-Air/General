@@ -14,7 +14,7 @@ nav_order: 1
  
 - [Algemeen](#algemeen)
   - [Inhoud](#inhoud)
-  - [Inleding] (#inleiding)
+  - [Inleiding] (#inleiding)
   - [Flow chart](#Flow-chart)
   - [Rolverdeling](#Rolverdeling)
   - [Detectie personen](#Detectie-personen)
