@@ -7,7 +7,7 @@ nav_order: 2
 
 # stroomverbuik
 |      stroomverbuik per week     	|                       	|                       	|        	|               	|
-|:-------------------------------:	|:---------------------:	|:---------------------:	|:------:	|:-------------:	|
+|-----------------------------------|:------------------------|-------------------------|---------|-----------------|
 | gas sensor BME680               	|                       	| µA gemiddeld verbuik  	|        	|               	|
 |                                 	| ULP                   	|                    80 	|        	|      0.044352 	|
 | voeding                         	|                       	|                   0.8 	|        	|    0.00044352 	|
@@ -34,4 +34,4 @@ nav_order: 2
 |                                 	|                       	|                       	|        	|               	|
 |                                 	| per jaar              	|           10.53294457 	| Wh     	|               	|
 
-Een AA baterij heeft een gemiddelde capaciteit van 2-3 Wh dus indien we een jaar willen doorkomen hebben we nood aan 5 batterijen.
+Een AA baterij heeft een gemiddelde capaciteit van 2-3 Wh, dus indien we een jaar willen doorkomen hebben we nood aan 5 batterijen.
