@@ -9,12 +9,12 @@ nav_order: 2
 
 |      stroomverbuik per week     	|                       	|                       	|        	|               	|
 |-----------------------------------|:------------------------|-------------------------|---------|-----------------|
-| gas sensor BME680               	|                       	| µA gemiddeld verbuik  	|        	|               	|
+| _gas sensor BME680_               |                       	| µA gemiddeld verbuik  	|        	|               	|
 |                                 	| ULP                   	|                    80 	|        	|      0.044352 	|
 | voeding                         	|                       	|                   0.8 	|        	|    0.00044352 	|
 | battery level (spanningsdeleer) 	|                       	|                     1 	|        	|     0.0005544 	|
 |                                 	|                       	|                       	|        	|               	|
-| beweging sensor [worst case]    	|                       	|                       	|        	|               	|
+| _beweging sensor [worst case]_   	|                       	|                       	|        	|               	|
 | beweging gedecteerd [uur]       	|                    60 	|                       	|        	|               	|
 | tijd [uur]                      	| mode                  	| I[µA]                 	|        	| Wh            	|
 |                           60.00 	| actief                	|                   106 	|        	|      0.020988 	|
@@ -22,7 +22,7 @@ nav_order: 2
 | tijd [uur]                      	| mode                  	| I[µA]                 	|        	| Wh            	|
 |                          108.00 	| standby               	|                     6 	|        	|     0.0021384 	|
 |                                 	|                       	|                       	|        	|               	|
-| esp32 schatting                 	| aantal metingen / uur 	|                    12 	|        	|               	|
+| _esp32 schatting_                	| aantal metingen / uur 	|                    12 	|        	|               	|
 | tijd [s]                        	| mode                  	| I[mA]                 	| aantal 	| Wh            	|
 |                            5.00 	| wifi                  	|                   130 	|    183 	|     0.1090375 	|
 |                          603885 	| sleep                 	|                 0.005 	|      1 	| 0.00276780625 	|
