@@ -65,3 +65,6 @@ Om de bewegingen in de ruimte te registreren gebruiken we de [EKMB1305112K](http
 Hieronder zijn de top en bottom views te zien van onze PCB. Centraal bevindt zich de esp32, rechts bevindt zich de BME680 (U4) en links bevindt zich de PIR sensor. De twee sensoren staan zo ver als mogelijk uit elkaar omdat de PIR sensor gevoelig is voor warmte en de BME680 redelijk wat warmte genereert. Naast deze zaken zijn ook enkele basis voorzieningen aanwezig zoals vele testpunten, een LDO, een test LED en knop en extra pinheaders om een BME680 module te kunnen bevestigen (dit is voor in het geval dat we er niet in slagen om de BME680 aan onze PCB te solderen). 
 ![Top view PCB](Top.png)
 ![Bottom view PCB](Bottom.png)
+
+## Communicatie
+Als communicatieprotocol werd er gekozen voor MQTT, enerzijds omdat dit ook als low power protocol beschouwd wordt, doordat de hoeveelheid data die verzonden wordt klein (kleine code footprint en kleine message size) is. Er wordt ook enkel geluisterd naar kanalen die voor elke specifieke node van toepassing zijn, waardoor het ook gemakkelijk te implementeren is samen met de nodes van de andere groepen. Er kan eventueel nog gekeken worden om de MQTT-SN te gebruiken, dit is een variant van MQTT die de efficiëntie nog verbeterd bij beide de transmissie en energieverbruik.
