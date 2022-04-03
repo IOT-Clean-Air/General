@@ -62,3 +62,5 @@ Als gassensor gebruiken we de [BME680](https://www.bosch-sensortec.com/media/bos
 Om de bewegingen in de ruimte te registreren gebruiken we de [EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf), een PIR sensor van Panasonic.
 
 ## PCB 
+![Top view PCB](Top.png)
+![Bottom view PCB](Bottom.png)
