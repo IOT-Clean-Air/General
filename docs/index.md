@@ -33,3 +33,5 @@ nav_order: 2
 |                                 	| per week              	|          0.2025566263 	| Wh     	|               	|
 |                                 	|                       	|                       	|        	|               	|
 |                                 	| per jaar              	|           10.53294457 	| Wh     	|               	|
+
+Een AA baterij heeft een gemiddelde capaciteit van 2-3 Wh dus indien we een jaar willen doorkomen hebben we nood aan 5 batterijen.
