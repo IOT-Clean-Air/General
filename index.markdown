@@ -23,6 +23,7 @@ nav_order: 1
   - [Microcontroller](#Microcontroller)
   - [Gebruikte sensoren](#Gebruikte-sensoren)
   - [PCB](#PCB)
+  - [Communcitie](#Communicatie)
 
 ## Inleiding
 
