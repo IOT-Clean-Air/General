@@ -14,18 +14,19 @@ nav_order: 1
  
 - [Algemeen](#algemeen)
   - [Inhoud](#inhoud)
+  - [Inleding] (#inleiding)
   - [Flow chart](#Flow-chart)
   - [Rolverdeling](#Rolverdeling)
-    - [Gebruikte sensoren](#Gebruikte-sensoren)
-    - [Microcontroller](#Microcontroller)
-    - [Detectie personen](#Detectie-personen)
-    - [Gasmetingen](#Gasmetingen)
-    - [Alohamora](#alohamora)
+  - [Detectie personen](#Detectie-personen)
+  - [Gasmetingen](#Gasmetingen)
   - [Werking](#Werking)
+  - [Microcontroller](#Microcontroller)
+  - [Gebruikte sensoren](#Gebruikte-sensoren)
+  - [PCB](#PCB)
 
 ## Inleiding
 
-In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compounds (VOC) vrijkomen, dit zijn onder andere componenten van brandstoffen of oplosmiddelen. Deze kunnen schadelijk zijn voor de gezondheid. Het is dan ook belangrijk deze gassen in de gaten te houden en een waarschuwing te verzenden wanneer bepaalde waarden overschreden worden. Zeker wanneer personen aanwezig zijn in de vervuilde ruimte.
+In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compounds (VOC) vrijkomen, dit zijn onder andere componenten van brandstoffen of oplosmiddelen. Deze kunnen schadelijk zijn voor de gezondheid. Het is dan ook belangrijk deze gassen in de gaten te houden en een waarschuwing te verzenden wanneer bepaalde waarden overschreden worden, zeker wanneer personen aanwezig zijn in de vervuilde ruimte.
 
 ## Flow chart
 ![flow chart](flow.PNG)
@@ -40,22 +41,24 @@ In ets- en soldeerlokalen kunnen tijdens de werkprocessen volatile organic compo
 | Glen Smet       | Hardware PCB design   | Project manager           |
 
 
-### Detectie personen
+## Detectie personen
 Indien er niemand gedetecteerd wordt mag er minder frequent gemeten worden maar moet er nog steeds een melding gegeven worden als de treshold overschreden wordt.
 Indien er iemand gedetecteerd wordt moet er frequenter gemeten worden en moet er lokaal een alarm afgegaan bovenop op de melding. De threshold en frequenties van meten zijn opgenomen in het blokschema. Dit was het eerste concept van de IOT node. Maar na het testen en verdiepen in de gekozen gassensor hebben we ontdekt dat er geen mogelijkheid is om een IAQ meting te doen op een ander interval dan 5s.
 
-### Gasmetingen
-De lucht in de ruimte wordt gemeten, op basis daarvan wordt beslist of deze niet vervuild is. Bij een goede waarde hoeft er niet meteen iets te gebeuren en kan er terug in sleep mode gegaan worden. Anders wordt een geluidssignaal afgespeeld (enkel indien er beweging was gedetecteerd)  en onmiddellijk een update verzonden naar de database.
+## Gasmetingen
+De lucht in de ruimte wordt gemeten. Op basis daarvan wordt beslist of deze niet al dan niet vervuild is. Bij een goede waarde hoeft er niet meteen iets te gebeuren en kan er terug in sleep mode gegaan worden. Anders wordt een geluidssignaal afgespeeld (enkel indien er beweging was gedetecteerd)  en onmiddellijk een update verzonden naar de database.
 
 ## Werking
-De architectuur bestaande uit een ESP32-C3-WROOM-02-N4 controller met daarop een bewegingssensor en gas sensor zal gebruikt worden als volgt. Indien er beweging gedetecteerd wordt zal een timer gestart worden van 5 min. Indien deze timer loopt kunnen we aannemen dat er iemand in de ruimte is. Het doel van deze timer is om te vermijden dat er niet doorlopend geswitched worden door het even niet detecteren van beweging. Er zal ook een tweede timer lopen van 5 min voor het correct uitlezen van de gassensor. De gassensor zal zich in ULP bevinden en om de 5 min sample. Dit is meest zuinig modus die ons toelaat om een accurate meting te doen. Indien de gemeten waarde lager is dan 125 zal de data worden opgeslagen en zal de esp32 terug in slaap gaan. Wanneer er 12 metingen zijn opgeslagen zal de data worden doorgestuurd. Dit zorgt ervoor dat in de databank elk uur een meting wordt ontvangen ongeacht of er beweging is of niet. Indien de waarde van 125 overschreden werd zal er meteen een alarm afgaan in de vorm van een buzzer alsook zal de data worden doorgestuurd zodat er een melding naar de gebruiker kan gaan. Alle timers zullen rtc gestuurd zijn op de esp 32. De minimum data dat wordt doorgestuurd is 9 bits aangezien de IAQ varieert tussen 0 en 500. De gemeten data wordt via een wifi module verzonden naar een centraal punt. Tussen de metingen zal de ESP zich in sleep mode bevinden. Hij wordt wakker gemaakt door een periodiek tijdsignaal of indien een beweging geregistreerd wordt.
+De architectuur bestaande uit een ESP32-C3-WROOM-02-N4 controller met daarop een bewegingssensor en gassensor zal gebruikt worden als volgt. Indien er beweging gedetecteerd wordt zal een timer gestart worden van 5 min. Indien deze timer loopt kunnen we aannemen dat er iemand in de ruimte is. Het doel van deze timer is om te vermijden dat er niet doorlopend geswitched worden door het even niet detecteren van beweging. Er zal ook een tweede timer lopen van 5 min voor het correct uitlezen van de gassensor. De gassensor zal zich in ULP bevinden en om de 5 min samplen. Dit is de meest zuinige modus die ons toelaat om een accurate meting te doen. Indien de gemeten waarde lager is dan 125 zal de data worden opgeslagen en zal de esp32 terug in slaap gaan. Wanneer er 12 metingen zijn opgeslagen zal de data worden doorgestuurd. Dit zorgt ervoor dat in de databank elk uur een meting wordt ontvangen ongeacht of er beweging is of niet. Indien de waarde van 125 overschreden werd zal er meteen een alarm afgaan in de vorm van een buzzer alsook zal de data worden doorgestuurd zodat er een melding naar de gebruiker kan gaan. Alle timers zullen rtc gestuurd zijn op de esp 32. De minimum data dat wordt doorgestuurd is 9 bits aangezien de IAQ varieert tussen 0 en 500. De gemeten data wordt via een wifi module verzonden naar een centraal punt. Tussen de metingen zal de ESP zich in sleep mode bevinden. Hij wordt wakker gemaakt door een periodiek tijdsignaal of indien een beweging geregistreerd wordt.
 
-### Microcontroller
-ESP32-C3-WROOM-02-N4
+## Microcontroller
+ESP32-C3-WROOM-02-N4: 
 Uit onze eerste energie berekeningen volgt dat we de esp32 kunnen voeden met 5 AA batterijen zodat deze een autonomie heeft van 1 jaar.
-Als microcontroller kiezen we ervoor om een low power esp 32 gebruiken. Deze heeft als voordeel dat het verbruik in slaap aanzienlijk lager is. We kozen voor deze microcontroller omdat we er al mee gewerkt hadden zodat we hier niet te veel tijd mee verloren aangezien de deadlines redelijk strak zijn.
+Als microcontroller kiezen we ervoor om een low power esp 32 te gebruiken. Deze heeft als voordeel dat het verbruik in slaap aanzienlijk lager is. We kozen voor deze microcontroller omdat we er al mee gewerkt hadden zodat we hier niet te veel tijd mee verloren aangezien de deadlines redelijk strak zijn.
 
-### Gebruikte sensoren
+## Gebruikte sensoren
 
 Als gassensor gebruiken we de [BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) van Bosch.
-Om de bewegingen in de ruimte te registreren gebruiken we de [EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf) een PIR sensor van Panasonic.
+Om de bewegingen in de ruimte te registreren gebruiken we de [EKMB1305112K](https://www.mouser.be/datasheet/2/315/bltn_eng_papirs-1365490.pdf), een PIR sensor van Panasonic.
+
+## PCB 
