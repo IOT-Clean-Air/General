@@ -6,6 +6,7 @@ nav_order: 2
 ---
 
 # stroomverbuik
+
 |      stroomverbuik per week     	|                       	|                       	|        	|               	|
 |-----------------------------------|:------------------------|-------------------------|---------|-----------------|
 | gas sensor BME680               	|                       	| µA gemiddeld verbuik  	|        	|               	|
