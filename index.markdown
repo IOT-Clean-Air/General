@@ -72,3 +72,4 @@ Als communicatieprotocol werd er gekozen voor MQTT, enerzijds omdat dit ook als 
 
 ## Software
 Alle software wordt geschreven in cpp op het arduino framework via Plafrom IO in Visual studio code. Voor het project is de BME680 onze hoofd component en bepaald de voledige software flow. Om de sensor in ULP (ultra low power) te laten werken is het namelijk verplicht om een meting te doen elke 5 min. Enkel en allen op deze manier kan de bibliotheek die we gebruiken een AIQ (indoor air quality) cijfer berkenen. Dit is een cijfer tussen 0 en 500 die de qualiteit van de lucht bepaald. Een tabel is te zien in figuur....Tussen de metingen kan de sensor in deepsleep. Hiervoor moet telkens alle gegevens opgeslaan worden in een stuk geheugen die blijvend is tijdens een deepsleep net voor hij in deep sleep gaat om dan net voor hij uit deepsleep gaat weer opgehaald word om een nieuwe meting te doen. 
+![AIQ categorieen](aiq.png)
