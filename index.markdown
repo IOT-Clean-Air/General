@@ -22,7 +22,6 @@ nav_order: 1
   - [Werking](#Werking)
   - [Microcontroller](#Microcontroller)
   - [Gebruikte sensoren](#Gebruikte-sensoren)
-  - [PCB](#PCB)
   - [Communicatie](#Communicatie)
 
 ## Inleiding
