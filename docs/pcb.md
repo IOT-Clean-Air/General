@@ -13,4 +13,4 @@ Bij het testen van het pcb zijn er enkele fouten in het design ontdekt. Bij de L
 
 Bij het testen van de BME680 werkte deze niet, we hebben deze herhaaldelijk er terug af gesoldeerd en terug opgezet maar deze module wou maar niet werken. Gelukkig waren we hier op voorbereid en hadden we headers voorzien waarop we het testboard konden plaatsen.
 
-
+Er was ook nog een uitbreiding voorzien moest er tijd zijn over geweest om de batterij spanning op te volgen en zo een waarschuwing te geven wanneer de batterij vervangen moest worden. 
