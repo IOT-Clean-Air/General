@@ -56,6 +56,8 @@ ESP32-C3-WROOM-02-N4:
 Uit onze eerste energie berekeningen volgt dat we de esp32 kunnen voeden met 5 AA batterijen zodat deze een autonomie heeft van 1 jaar.
 Als microcontroller kiezen we ervoor om een low power esp 32 te gebruiken. Deze heeft als voordeel dat het verbruik in slaap aanzienlijk lager is. We kozen voor deze microcontroller omdat we er al mee gewerkt hadden zodat we hier niet te veel tijd mee verloren aangezien de deadlines redelijk strak zijn.
 
+Na het oplossen van de fouten op het pcb zoals beschreven, kregen we nog steeds problemen met het uploaden van de code naar de esp32-c3. De fout bleek te komen van de BME680 library van Bosh zelf. De compiler vond de voor gecompileerde bibliotheek niet, we hebben toen door middel van flags de bibliotheek voor de esp32 meegegeven.  Toen kregen we een andere foutmelding namelijk dat de architectuur van de bibliotheek niet werd ondersteund. We hebben dan gezocht op deze foutmelding en zijn er op uit gekomen dat er op een forum nog iemand met een gelijkaardig probleem was en dat toen er gezegd was door een moderator dat de esp32-c3 nog niet ondersteund werd desondanks dat het aan alle specificaties voldoet voor de bibliotheek.  We hebben dan maar besloten om als microcontroller de standaard esp32 te gebruiken. We hadden in de tussentijd ook contact gezocht met Bosh en deze hebben laten weten dat er momenteel nog geen ondersteuning is voor dit bord maar dat deze zal volgen in toekomstige versies.
+
 ## Gebruikte sensoren
 
 Als gassensor gebruiken we de [BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) van Bosch.
