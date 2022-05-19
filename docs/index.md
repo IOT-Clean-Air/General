@@ -9,7 +9,7 @@ nav_order: 2
 ![stroomberekening randapparatuur](tabel1.png)
 ![stroomberekening esp32](tabel2.png)
 
-<a href="url"><img src="tabel3.png" align="center" width="50%" ></a>
+<a href="url"><img src="tabel3.png" align="center" width="60%" ></a>
 
   
 ![verdeling](tabel4.png)
