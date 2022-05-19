@@ -18,7 +18,7 @@ nav_order: 1
   - [Rolverdeling](#Rolverdeling)
   - [Detectie personen](#Detectie-personen)
   - [Gasmetingen](#Gasmetingen)
-  - [Werking](#Werking)
+  - [Eerste concept](#Eerste-concept)
   - [Microcontroller](#Microcontroller)
   - [Gebruikte sensoren](#Gebruikte-sensoren)
   - [Communicatie](#Communicatie)
@@ -45,7 +45,7 @@ Indien er wel een persoon gedetecteerd wordt, moet er frequenter gemeten worden 
 ## Gasmetingen
 De gasmetingen worden vanzelfsprekend gedaan door de lucht in de ruimte te meten. Op basis daarvan wordt beslist of deze niet al dan niet vervuild is, of er VOC's aanwezig zijn en in welke concentratie. Bij een goede waarde hoeft er niet meteen iets te gebeuren en kan er terug in sleep mode gegaan worden, de gemeten waarde kan eventueel opgeslagen worden of verstuurd naar een centrale eenheid. Wanneer de waarden te hoog worden bevonden wordt een geluidssignaal afgespeeld (enkel indien er beweging was gedetecteerd) en onmiddellijk een update verzonden naar de database.
 
-## Werking
+## Eerste concept
 De architectuur bestaande uit een ESP32-C3-WROOM-02-N4 controller met daarop een bewegingssensor en gassensor die gebruikt zullen worden als volgt. Indien er beweging gedetecteerd wordt, zal er een timer gestart worden van vijf min. Terwijl deze timer loopt kunnen we aannemen dat er iemand in de ruimte aanwezig is. Het doel van deze timer is om te vermijden dat er niet doorlopend gewisseld wordt tussen aanwezigheid en afwezigheid van personen door het even niet detecteren van beweging. Er zal ook een tweede timer lopen van vijf minuten voor het correct uitlezen van de gassensor. De gassensor zal zich in ULP (Ultra Low Power modus) bevinden en om de vijf minuten samplen. Dit is de meest zuinige modus die ons toelaat om een accurate meting te doen. Indien de gemeten waarde lager is dan 125 zal de data worden opgeslagen en zal de esp32 terug in slaap gaan. Wanneer er 12 metingen zijn opgeslagen zal de data worden doorgestuurd. Dit zorgt ervoor dat in de databank elk uur een meting wordt ontvangen ongeacht of er beweging is of niet. Indien de waarde van 125 overschreden werd zal er meteen een alarm afgaan in de vorm van een buzzer alsook zal de data worden doorgestuurd zodat er een melding naar de gebruiker kan gaan. Alle timers zullen rtc gestuurd zijn op de esp 32. De minimum data dat wordt doorgestuurd is 9 bits aangezien de IAQ varieert tussen 0 en 500. De gemeten data wordt via een wifi module verzonden naar een centraal punt. Tussen de metingen zal de ESP zich in sleep mode bevinden. Hij wordt wakker gemaakt door een periodiek tijdsignaal of door een interrupt indien een beweging geregistreerd wordt.
 
 ## Microcontroller
