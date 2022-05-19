@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 # stroomverbuik
-![stroomberekening randapparatuur](tabel3.png)
+![stroomberekening](tabel13.png)
 ![verdeling](tabel4.png)
 ![meting stroom wifi](afb1.png)
 ![meting stroom meting met BME680](afb2.png)
