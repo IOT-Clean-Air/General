@@ -12,7 +12,7 @@ nav_order: 2
 <a href="url"><img src="tabel3.png" align="center" width="100" ></a>
 
 <div style="width:50%">
-![totaal](tabel3.png?raw=true)
+![totaal](tabel3.png)
 <div>
   
 ![verdeling](tabel4.png)
