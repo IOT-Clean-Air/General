@@ -8,12 +8,9 @@ nav_order: 2
 # stroomverbuik
 ![stroomberekening randapparatuur](tabel1.png)
 ![stroomberekening esp32](tabel2.png)
-![stroomberekening totaal](tabel3.png )
-<a href="url"><img src="tabel3.png" align="center" width="100" ></a>
 
-<div style="width:50%">
-![totaal](tabel3.png)
-<div>
+<a href="url"><img src="tabel3.png" align="center" width="50%" ></a>
+
   
 ![verdeling](tabel4.png)
 ![meting stroom wifi](afb1.png)
