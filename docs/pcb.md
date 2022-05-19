@@ -1,6 +1,6 @@
 ---
 layout: default
-title: pcb
+title: Pcb
 has_children: false
 nav_order: 2
 ---
