@@ -6,11 +6,11 @@ nav_order: 2
 ---
 
 ## PCB 
-![blokschema PCB](blokpcb.png)
+![blokschema PCB](blokpcb.png)\\
 
-Hieronder zijn de top en bottom views te zien van onze PCB. Centraal bevindt zich de esp32, rechts bevindt zich de BME680 (U4) en links bevindt zich de PIR sensor. De twee sensoren staan zo ver als mogelijk uit elkaar, omdat de PIR sensor gevoelig is voor warmte en de BME680 redelijk wat warmte genereert. Naast deze zaken zijn ook enkele basis voorzieningen aanwezig, zoals veel testpunten, een LDO, een test LED, een knop en extra pinheaders om een BME680 module te kunnen bevestigen (dit is voor in het geval dat we er niet in slagen om de BME680 aan onze PCB te solderen). 
+Hieronder zijn de top en bottom views te zien van onze PCB. Centraal bevindt zich de esp32, rechts bevindt zich de BME680 (U4) en links bevindt zich de PIR sensor. De twee sensoren staan zo ver als mogelijk uit elkaar, omdat de PIR sensor gevoelig is voor warmte en de BME680 redelijk wat warmte genereert. Naast deze zaken zijn ook enkele basis voorzieningen aanwezig, zoals veel testpunten, een LDO, een test LED, een knop en extra pinheaders om een BME680 module te kunnen bevestigen (dit is voor in het geval dat we er niet in slagen om de BME680 aan onze PCB te solderen).\\ 
 ![Top view PCB](Top.png)
-![Bottom view PCB](Bottom.png)
+![Bottom view PCB](Bottom.png)\\
 
 Bij het testen van het pcb zijn er enkele fouten in het design ontdekt. Bij de LM2989 was de enable niet verbonden met de V<sub>in</sub> en de sense pin niet met de V<sub>out</sub>. Er is ook voor gekozen om een pull-up weerstand toe te voegen aan de testbutton omdat we de interne weerstand niet onmiddellijk software matig konden ingesteld krijgen. Er waren ook nog 2 pinnen die op de esp hoog moesten zijn tijdens het downloaden van de code. Deze problemen konden opgelost worden door de aanwezige testpunten.
 
